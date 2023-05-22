@@ -1,8 +1,8 @@
 package edu.douzone.bitc.tetris;
 
-import static com.douzone.tetris.TetrisConstant.GLOBAL_DELAY;
-import static com.douzone.tetris.TetrisConstant.KEYBOARD_FILE_PATH;
-import static com.douzone.tetris.TetrisConstant.PLAYER_COUNT;
+import static edu.douzone.bitc.tetris.TetrisConstant.GLOBAL_DELAY;
+import static edu.douzone.bitc.tetris.TetrisConstant.KEYBOARD_FILE_PATH;
+import static edu.douzone.bitc.tetris.TetrisConstant.PLAYER_COUNT;
 
 import java.awt.Color;
 import java.awt.Dimension;

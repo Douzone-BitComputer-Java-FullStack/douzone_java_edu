@@ -1,16 +1,17 @@
 package edu.douzone.bitc.tetris;
 
-import static com.douzone.tetris.TetrisConstant.COLORS;
-import static com.douzone.tetris.TetrisConstant.GHOST_COLOR;
-import static com.douzone.tetris.TetrisConstant.GLOBAL_DELAY;
-import static com.douzone.tetris.TetrisConstant.GLOBAL_LOCK;
-import static com.douzone.tetris.TetrisConstant.MAX_SEND_COUNT;
-import static com.douzone.tetris.TetrisConstant.RECORD_FILE_PATH;
-import static com.douzone.tetris.TetrisConstant.UI_COLOR;
-import static com.douzone.tetris.TetrisConstant.moveColumn1;
-import static com.douzone.tetris.TetrisConstant.moveColumn2;
-import static com.douzone.tetris.TetrisConstant.moveRow1;
-import static com.douzone.tetris.TetrisConstant.moveRow2;
+
+import static edu.douzone.bitc.tetris.TetrisConstant.COLORS;
+import static edu.douzone.bitc.tetris.TetrisConstant.GHOST_COLOR;
+import static edu.douzone.bitc.tetris.TetrisConstant.GLOBAL_DELAY;
+import static edu.douzone.bitc.tetris.TetrisConstant.GLOBAL_LOCK;
+import static edu.douzone.bitc.tetris.TetrisConstant.MAX_SEND_COUNT;
+import static edu.douzone.bitc.tetris.TetrisConstant.RECORD_FILE_PATH;
+import static edu.douzone.bitc.tetris.TetrisConstant.UI_COLOR;
+import static edu.douzone.bitc.tetris.TetrisConstant.moveColumn1;
+import static edu.douzone.bitc.tetris.TetrisConstant.moveColumn2;
+import static edu.douzone.bitc.tetris.TetrisConstant.moveRow1;
+import static edu.douzone.bitc.tetris.TetrisConstant.moveRow2;
 
 import java.awt.Graphics;
 import java.io.BufferedReader;

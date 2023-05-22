@@ -1,6 +1,7 @@
 package edu.douzone.bitc.tetris;
 
-import static com.douzone.tetris.TetrisConstant.PLAYER_COUNT;
+
+import static edu.douzone.bitc.tetris.TetrisConstant.PLAYER_COUNT;
 
 import java.awt.Frame;
 
