@@ -19,5 +19,6 @@ public class Lotto {
 
         LottoMachine lottoMachine = new LottoMachine(lottoBalls);
         lottoMachine.running();
+
     }
 }
