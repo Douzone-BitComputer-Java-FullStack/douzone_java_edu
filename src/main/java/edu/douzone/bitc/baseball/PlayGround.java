@@ -20,9 +20,7 @@ public class PlayGround {
     private Random random = new Random();
 
     private static final int TOTAL_COUNT = 4;
-
     private static final int QUITE_SIGN = 0;
-
     private static final int MAX_SIZE = 9999;
     private static final int MIN_SIZE = 1000;
 
