@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -18,6 +19,12 @@ public class StudentService {
 
     private static final String ANSWER_1_FILE_PATH = "src/main/resources/Ans1.txt";
     private static final String ANSWER_2_FILE_PATH = "src/main/resources/Ans2.txt";
+
+    private static final Map<String, Integer> areaCodeValueMap = Map.of(
+        "A", 5,
+        "B", 10,
+        "C", 15
+    );
 
 
     public String solution1(List<Student> students) {
@@ -108,6 +115,21 @@ public class StudentService {
             .sum();
     }
 
+    public int solution4(List<Student> students) {
+
+        int count = 0;
+
+        for (Student student : students) {
+            if (student.getAchievement().equals(AchievementEnum.A) ||
+                student.getAchievement().equals(AchievementEnum.B)) {
+                if (student.getKoreanScore() + areaCodeValueMap.get(student.getAreaCode()) >= 50) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
 
 
 
