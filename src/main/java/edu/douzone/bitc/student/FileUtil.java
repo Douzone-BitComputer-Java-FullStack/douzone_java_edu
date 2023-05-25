@@ -94,7 +94,7 @@ public class FileUtil {
         while (st.hasMoreTokens()) {
             students.add(
                 new Student.Builder()
-                .studentNum(st.nextToken())
+                .studentNum(Integer.parseInt(st.nextToken()))
                 .email(st.nextToken())
                 .koreanScore(Integer.parseInt(st.nextToken().trim()))
                 .englishScore(Integer.parseInt(st.nextToken().trim()))

@@ -1,8 +1,6 @@
 package edu.douzone.bitc.student;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +25,7 @@ public class StudentService {
     );
 
 
-    public String solution1(List<Student> students) {
+    public int solution1(List<Student> students) {
 
         /**
          * not stream
@@ -51,7 +49,7 @@ public class StudentService {
         /**
          * stream
          */
-        String answer = students.stream()
+        int answer = students.stream()
             .filter(student -> Objects.equals(student.getAreaCode(), "B"))
             .sorted(
                 (o1, o2) -> {
@@ -59,17 +57,17 @@ public class StudentService {
                     int o2Score = o2.getKoreanScore() + o2.getEnglishScore();
 
                     if (Objects.equals(o1Score, o2Score)) {
-                        return o1.getStudentNum().compareTo(o2.getStudentNum());
+                        return Integer.compare(o1.getStudentNo(), o2.getStudentNo());
                     }
 
                     return o2Score - o1Score;
                 })
             .collect(Collectors.toList())
             .get(5)
-            .getStudentNum();
+            .getStudentNo();
 
         try {
-            FileUtil.writeFile(ANSWER_1_FILE_PATH, answer);
+            FileUtil.writeFile(ANSWER_1_FILE_PATH, String.valueOf(answer));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -145,7 +143,7 @@ class StudentKoreanEnglishUpperSort implements Comparator<Student> {
         int o2Score = o2.getKoreanScore() + o2.getEnglishScore();
 
         if (Objects.equals(o1Score, o2Score)) {
-            return o1.getStudentNum().compareTo(o2.getStudentNum());
+            return Integer.compare(o1.getStudentNo(), o2.getStudentNo());
         }
 
         return o2Score - o1Score;
@@ -159,7 +157,7 @@ class StudentKoreanEnglishLowerSort implements Comparator<Student> {
         int o2Score = o2.getKoreanScore() + o2.getEnglishScore();
 
         if (Objects.equals(o1Score, o2Score)) {
-            return o1.getStudentNum().compareTo(o2.getStudentNum());
+            return Integer.compare(o1.getStudentNo(), o2.getStudentNo());
         }
 
         return o1Score - o2Score;

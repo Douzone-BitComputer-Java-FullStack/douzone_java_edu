@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
  * @since : 1.0
  **/
 public class Student {
-    private String studentNum;
+    private int studentNo;
     private String email;
     private int koreanScore;
     private int englishScore;
@@ -23,7 +23,7 @@ public class Student {
     private String areaCode;
 
     public Student(Builder builder) {
-        this.studentNum = builder.studentNum;
+        this.studentNo = builder.studentNo;
         this.email = builder.email;
         this.koreanScore = builder.koreanScore;
         this.englishScore = builder.englishScore;
@@ -37,7 +37,7 @@ public class Student {
     }
 
     static class Builder {
-        private String studentNum;
+        private int studentNo;
         private String email;
         private int koreanScore;
         private int englishScore;
@@ -49,8 +49,8 @@ public class Student {
         private AchievementEnum achievement;
         private String areaCode;
 
-        public Builder studentNum(String studentNum) {
-            this.studentNum = studentNum;
+        public Builder studentNum(int studentNo) {
+            this.studentNo = studentNo;
             return this;
         }
 
@@ -126,7 +126,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-            "studentNum='" + studentNum + '\'' +
+            "studentNum='" + studentNo + '\'' +
             ", email='" + email + '\'' +
             ", koreanScore=" + koreanScore +
             ", englishScore=" + englishScore +
@@ -140,8 +140,8 @@ public class Student {
             '}';
     }
 
-    public String getStudentNum() {
-        return studentNum;
+    public int getStudentNo() {
+        return studentNo;
     }
 
     public String getEmail() {
