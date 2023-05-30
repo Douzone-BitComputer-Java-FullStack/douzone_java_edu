@@ -49,6 +49,8 @@ public class Management {
         try (Connection connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD)) {
 
             psmt = connection.prepareStatement(insertStudents);
+
+            PreparedStatement preparedStatement = connection.prepareStatement(insertStudents);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

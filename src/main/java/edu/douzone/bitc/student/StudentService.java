@@ -63,7 +63,7 @@ public class StudentService {
                     return o2Score - o1Score;
                 })
             .collect(Collectors.toList())
-            .get(5)
+            .get(4)
             .getStudentNo();
 
         try {
