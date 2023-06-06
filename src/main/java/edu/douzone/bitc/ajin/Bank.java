@@ -1,5 +1,9 @@
 package edu.douzone.bitc.ajin;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -15,16 +19,18 @@ public class Bank {
     Scanner sc = new Scanner(System.in);
 
     public void addAccount() {
-        System.out.println("이름 :");
-        String userName = sc.nextLine();
-        System.out.println("계좌번호 :");
-        int accountNo = sc.nextInt();
-        System.out.println("계좌 비밀번호(4자리) :");
-        int password = sc.nextInt();
-
-        accounts.add(new Account(userName, accountNo, password));
-        System.out.println("계좌 생성이 완료되었습니다.");
-
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
+            System.out.println("이름 :");
+            String userName = br.readLine();
+            System.out.println("계좌번호 :");
+            int accountNo = Integer.parseInt(br.readLine());
+            System.out.println("계좌 비밀번호(4자리) :");
+            int password = Integer.parseInt(br.readLine());
+            accounts.add(new Account(userName, accountNo, password));
+            System.out.println("계좌 생성이 완료되었습니다.");
+        } catch (IOException e) {
+            System.out.println("잘못된 입력입니다.");
+        }
 
     }
 

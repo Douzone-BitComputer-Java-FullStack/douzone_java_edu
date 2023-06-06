@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -13,19 +14,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-//        Main main = new Main();
-//
-//        main.bankStart();
+        Main main = new Main();
 
-        List<String> hello = List.of("Hello", "World");
-
-        List<Object> collect = hello.stream()
-            .map(word -> word.split(""))
-            .flatMap(Arrays::stream)
-            .collect(Collectors.toList());
-
-
-
+        main.bankStart();
     }
 
     public void bankStart(){
