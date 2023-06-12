@@ -14,5 +14,15 @@ public class Main {
         feed.registerObserver(new LeMonde());
         feed.notifyObservers("The queen said her favourite book is Modern Java in Action!");
 
+        feed.registerObserver((String tweet) -> {
+            if(tweet != null && tweet.contains("money")){
+                System.out.println("Breaking news in NY! " + tweet);
+            }
+        });
+        feed.registerObserver((String tweet) -> {
+            if(tweet != null && tweet.contains("queen")){
+                System.out.println("Yet more news from London... " + tweet);
+            }
+        });
     }
 }
