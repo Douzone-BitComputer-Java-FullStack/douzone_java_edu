@@ -1,5 +1,9 @@
 package edu.douzone.bitc.modernjava.chapter9.observer;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Some description here.
  *
