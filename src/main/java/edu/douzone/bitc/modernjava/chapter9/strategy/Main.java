@@ -1,5 +1,13 @@
 package edu.douzone.bitc.modernjava.chapter9.strategy;
 
+import static java.util.stream.Collectors.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * Some description here.
  *
