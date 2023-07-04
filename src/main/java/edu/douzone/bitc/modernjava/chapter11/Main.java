@@ -37,6 +37,8 @@ public class Main {
 //        return person.getCar().getInsurance().getName();
 //    }
 
+    // 외부 DSL 어따 쓰는건지 알려주세요!
+
 
 //    public String getCarInsuranceNameOptional(Optional<Person> person) {
 //        return person.flatMap(Person::getCar)
